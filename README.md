@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b81969ff-b986-46c1-94b8-9f926873d101/deploy-status)](https://app.netlify.com/sites/dreamy-baklava-a890b5/deploys)
+
 # Astro Starter Kit: Minimal
 
 ```
