@@ -2,20 +2,42 @@
 import Nav from '../components/Nav.astro';
 
 const pageTitle = "About Me";
+
+const skills = [
+  'cooking', 'programming'
+];
+
+// const color = '#bfb9b2';
+
+const styleAttrs = {
+  titleColor: '#bfb9b2',
+  titleSize: '3rem',
+  bodyFont: '"SF Pro", Arial, sans-serif',
+};
+
 ---
 
-<style>
+<style define:vars={{ ...styleAttrs }}>
 	body {
-		font-family: 'SF Pro',  Arial, sans-serif;
+		font-family: var(--bodyFont);
 	}
 	h1 {
-		color: #bfb9b2;
-		font-size: 3rem;
+		color: var(--titleColor);
+		font-size: var(--titleSize);
 	}
+
+  ul li {
+    list-style: none;
+  }
 </style>
 
 
 <body>
   <Nav />
   <h1>{pageTitle}</h1>
+
+  <p>My skills are: </p>
+  <ul>
+    {skills.map(skill => <li>{skill}</li>)}
+  </ul>
 </body>

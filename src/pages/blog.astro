@@ -2,18 +2,31 @@
 import Nav from '../components/Nav.astro';
 
 const pageTitle = 'My blog';
+
+const styleAttrs = {
+  titleColor: '#bfb9b2',
+  titleSize: '3rem',
+  bodyFont: '"SF Pro", Arial, sans-serif',
+};
 ---
 
-<style>
+<style define:vars={{ ...styleAttrs }}>
 	body {
-		font-family: 'SF Pro',  Arial, sans-serif;
+		font-family: var(--bodyFont);
 	}
 	h1 {
-		color: #bfb9b2;
-		font-size: 3rem;
+		color: var(--titleColor);
+		font-size: var(--titleSize);
 	}
-</style>
 
+  ul li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>
 
 <body>
   <Nav />
