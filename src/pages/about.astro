@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "About Me";
@@ -42,4 +43,6 @@ const styleAttrs = {
   <ul class="skills">
     {skills.map(skill => <li>{skill}</li>)}
   </ul>
+
+  <Footer />
 </body>

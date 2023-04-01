@@ -1,0 +1,31 @@
+---
+import Social from "./Social.astro";
+
+const socialMap = [{
+  platform: 'Github',
+  username: 'sainatj',
+}, {
+  platform: 'Instagram',
+  username: 'sainath_s',
+}];
+---
+
+<style>
+  ul li {
+    list-style: none;
+    line-height: 2.5rem;
+  }
+</style>
+
+<footer>
+  <p>Find me @</p>
+  <ul>
+    {
+      socialMap.map(socialProps => 
+        <li>
+          <Social {...socialProps} />
+        </li>
+      )
+    }
+  </ul>
+</footer>
