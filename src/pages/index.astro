@@ -1,3 +1,19 @@
+---
+import Nav from '../components/Nav.astro';
+
+const pageTitle = 'Home page';
+---
+
+<style>
+	body {
+		font-family: 'SF Pro',  Arial, sans-serif;
+	}
+	h1 {
+		color: #bfb9b2;
+		font-size: 3rem;
+	}
+</style>
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -7,9 +23,7 @@
 		<title>Movie List</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/blog">Blog</a>
-		<h1>Index page</h1>
+		<Nav />
+		<h1>{pageTitle}</h1>
 	</body>
 </html>

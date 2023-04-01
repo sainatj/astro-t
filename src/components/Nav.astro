@@ -1,0 +1,32 @@
+---
+const pageLinks = [{
+  path: '/',
+  name: 'Home',
+}, {
+  path: '/about',
+  name: 'About',
+}, {
+  path: '/blog',
+  name: 'Blog',
+}];
+---
+
+<style>
+  ul {
+    display: flex;
+  }
+
+  li {
+    list-style: none;
+    flex: auto;
+  }
+</style>
+
+<ul>
+  {pageLinks.map(link => (
+    <li>
+      <a href={link.path}>{link.name}</a>
+    </li>
+    ))
+  }
+</ul>
