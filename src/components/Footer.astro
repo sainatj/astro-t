@@ -11,20 +11,24 @@ const socialMap = [{
 ---
 
 <style>
-  ul li {
-    list-style: none;
-    line-height: 2.5rem;
+  div.socialDiv{ 
+    display: flex;
+  }
+
+  div.socialElement {
+    margin-right: 0.5rem;
+    line-height: 2rem;
   }
 </style>
 
 <footer>
   <p>Find me @</p>
-  <ul>
+  <div class="socialDiv">
     {
       socialMap.map(socialProps => 
-        <li>
+        <div class="socialElement">
           <Social {...socialProps} />
-        </li>
+        </div>
       )
     }
   </ul>

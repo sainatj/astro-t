@@ -1,6 +1,6 @@
 html {
   background-color: #f1f5f9;
-  font-family: sans-serif;
+  font-family: 'SF Compact Rounded', sans-serif;
 }
 
 body {
@@ -20,11 +20,24 @@ h1 {
   font-size: 2.5rem;
 }
 
+.menu {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.menu .line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: #3d1777;
+}
+
 .nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #116dbe;
+  background-color: #3d1777;
   display: none;
   margin: 0;
 }
@@ -34,15 +47,14 @@ h1 {
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1rem;
   text-transform: uppercase;
   border-radius: 0.5rem;
+  color: #767676;
 }
 
 .nav-links a:hover, a:focus {
-  background-color: #116dbe;
-  color: #f1f5f9;
+  background-color: #3d1777;
 }
 
 .expanded {
@@ -51,7 +63,6 @@ h1 {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
     display: block;
     position: static;
     width: auto;
@@ -61,5 +72,9 @@ h1 {
   .nav-links a {
     display: inline-block;
     padding: 15px 20px;
+  }
+
+  .menu {
+    display: none;
   }
 }

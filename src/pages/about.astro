@@ -9,27 +9,25 @@ const skills = [
   'cooking', 'programming'
 ];
 
-// const color = '#bfb9b2';
-
 const styleAttrs = {
-  titleColor: '#bfb9b2',
-  titleSize: '3rem',
-  bodyFont: '"SF Pro", Arial, sans-serif',
+  titleColor: '#767676',
+  titleSize: '2rem',
 };
-
 ---
 
+<script>
+	import '../scripts/menu.js';
+</script>
+
 <style define:vars={{ ...styleAttrs }}>
-	body {
-		font-family: var(--bodyFont);
-	}
-	h1 {
+  h1 {
 		color: var(--titleColor);
 		font-size: var(--titleSize);
 	}
 
-  ul.skills li{
-    list-style: none;
+  .skills {
+    display: flex;
+    flex-direction: column;
   }
 
 </style>
@@ -40,9 +38,9 @@ const styleAttrs = {
   <h1>{pageTitle}</h1>
 
   <p>My skills are: </p>
-  <ul class="skills">
-    {skills.map(skill => <li>{skill}</li>)}
-  </ul>
+  <div class="skills">
+    {skills.map(skill => <div>{skill}</div>)}
+  </div>
 
   <Footer />
 </body>

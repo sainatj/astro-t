@@ -7,16 +7,16 @@ import '../styles/global.css';
 const pageTitle = 'My blog';
 
 const styleAttrs = {
-  titleColor: '#bfb9b2',
-  titleSize: '3rem',
-  bodyFont: '"SF Pro", Arial, sans-serif',
+  titleColor: '#767676',
+  titleSize: '2rem',
 };
 ---
 
+<script>
+	import '../scripts/menu.js';
+</script>
+
 <style define:vars={{ ...styleAttrs }}>
-	body {
-		font-family: var(--bodyFont);
-	}
 	h1 {
 		color: var(--titleColor);
 		font-size: var(--titleSize);
