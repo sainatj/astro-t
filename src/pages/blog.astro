@@ -1,6 +1,8 @@
 ---
 import Nav from '../components/Nav.astro';
 
+import '../styles/global.css';
+
 const pageTitle = 'My blog';
 
 const styleAttrs = {
@@ -19,19 +21,15 @@ const styleAttrs = {
 		font-size: var(--titleSize);
 	}
 
-  ul li {
+  ul.posts li{
     list-style: none;
-  }
-
-  a {
-    text-decoration: none;
   }
 </style>
 
 <body>
   <Nav />
   <h1>{pageTitle}</h1>
-  <ul>
+  <ul class='posts'>
     <li><a href="/posts/post-1/">Post 1</a></li>
     <li><a href="/posts/post-2/">Post 2</a></li>
     <li><a href="/posts/post-3/">Post 3</a></li>

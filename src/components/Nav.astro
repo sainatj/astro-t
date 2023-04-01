@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const pageLinks = [{
   path: '/',
   name: 'Home',
@@ -17,20 +19,17 @@ const pageLinks = [{
   }
 
   li {
-    list-style: none;
     flex: auto;
-  }
-
-  a {
-    text-decoration: none;
   }
 </style>
 
-<ul>
-  {pageLinks.map(link => (
-    <li>
-      <a href={link.path}>{link.name}</a>
-    </li>
-    ))
-  }
-</ul>
+<nav>
+  <ul>
+    {pageLinks.map(link => (
+      <li>
+        <a href={link.path}>{link.name}</a>
+      </li>
+      ))
+    }
+  </ul>
+</nav>

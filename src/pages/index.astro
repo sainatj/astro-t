@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav.astro';
+import '../styles/global.css';
 
 const pageTitle = 'Home page';
 
@@ -10,16 +11,16 @@ const styleAttrs = {
 };
 ---
 
-<style define:vars={{ ...styleAttrs }}>
+<style define:vars={{...styleAttrs}}>
 	body {
 		font-family: var(--bodyFont);
 	}
+
 	h1 {
 		color: var(--titleColor);
 		font-size: var(--titleSize);
 	}
 </style>
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
