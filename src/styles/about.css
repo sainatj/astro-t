@@ -1,0 +1,8 @@
+.skills {
+  display: flex;
+  flex-direction: row;
+}
+
+.skills div {
+  margin-right: 0.3rem;
+}
