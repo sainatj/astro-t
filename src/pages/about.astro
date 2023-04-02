@@ -6,8 +6,7 @@ import '../styles/about.css';
 const { pageTitle, skills } = aboutVars();
 ---
 
-<BaseLayout>
-	<h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
   <p>My skills are: </p>
   <div class="skills">
     {
