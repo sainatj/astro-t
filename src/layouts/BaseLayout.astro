@@ -4,22 +4,11 @@ import Footer from '../components/Footer.astro';
 
 import '../styles/global.css';
 
-const styleAttrs = {
-  titleColor: '#767676',
-  titleSize: '2rem',
-};
 ---
 
 <script>
 	import '../scripts/menu.js';
 </script>
-
-<style define:vars={{...styleAttrs}}>
-	h1 {
-		color: var(--titleColor);
-		font-size: var(--titleSize);
-	}
-</style>
 
 <html lang="en">
 	<head>
@@ -27,7 +16,7 @@ const styleAttrs = {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Movie List</title>
+		<title>Astro Test</title>
 	</head>
 	<body>
 		<Header />
